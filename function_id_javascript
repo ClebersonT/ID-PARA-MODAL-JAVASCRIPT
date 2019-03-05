@@ -1,0 +1,12 @@
+//modal-remover é o nome do meu modal
+//no campo id pego e armazeno na variavel userid no javascript
+// e la no modal com um input hidden envio os dados para tomar alguma ação seja exclusão no banco edição ou outro etc
+
+$(document).ready(function(){
+		$('#modal-remover').on('show.bs.modal', function(e) {
+			console.log(e);
+			var userid = $(e.relatedTarget).data('userid');
+				//$(e.currentTarget).find('input[name="user_id"]').val(userid);
+				$("#id").val(userid);
+			});
+	});
